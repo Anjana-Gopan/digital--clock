@@ -1,0 +1,19 @@
+import time
+import datetime
+import os
+
+def digital_clock():
+    """
+    Creates a simple digital clock that updates every second.
+    """
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear') 
+        current_time = datetime.datetime.now().strftime("%H:%M:%S")
+        print(current_time)
+        time.sleep(1)
+
+if __name__ == "__main__":  
+    try:
+        digital_clock()
+    except KeyboardInterrupt:
+        print("\nClock stopped.")
